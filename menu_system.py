@@ -40,8 +40,11 @@ DEFAULT_INVENTORY = [
     }
 ]
 
-def create_product(item):
+def create_product(item: dict) -> Product:
 
+    supplier_data = item["supplier"]
+    supplier = Supplier(supplier_data["supplier_id"], supplier_data["name"], supplier_data["contact_email"])
+    
     product_type = item["type"].lower()
 
     if product_type == "physical":
@@ -50,7 +53,8 @@ def create_product(item):
             item["name"],
             item["price"],
             item["stock"],
-            item["weight"]
+            item["weight"],
+            supplier
         )
     elif product_type == "digital":
         return DigitalProduct(
@@ -58,7 +62,8 @@ def create_product(item):
             item["name"],
             item["price"],
             item["stock"],
-            item["download_size"]
+            item["download_size"],
+            supplier
         )
     else:
         raise ValueError("Unknown product type.")
@@ -104,7 +109,8 @@ def create_default_inventory():
 
 def save_inventory(inventory):
     data = []
-
+    supplier_data = {"supplier_id": product.supplier.supplier_id,"name": product.supplier.name,"contact_email": product.supplier.contact_email
+}
     for product in inventory.get_products():
         if isinstance(product, PhysicalProduct):
             item = {
@@ -113,7 +119,8 @@ def save_inventory(inventory):
                 "name": product.name,
                 "price": product.price,
                 "stock": product.stock,
-                "weight": product.weight
+                "weight": product.weight,
+                "supplier": supplier_data
             }
 
         elif isinstance(product, DigitalProduct):
@@ -123,7 +130,8 @@ def save_inventory(inventory):
                 "name": product.name,
                 "price": product.price,
                 "stock": product.stock,
-                "download_size": product.download_size
+                "download_size": product.download_size,
+                "supplier": supplier_data
         }
         else:
 
