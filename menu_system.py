@@ -109,8 +109,11 @@ def create_default_inventory():
 
 def save_inventory(inventory):
     data = []
-    supplier_data = {"supplier_id": product.supplier.supplier_id,"name": product.supplier.name,"contact_email": product.supplier.contact_email}
+
     for product in inventory.get_products():
+
+        supplier_data = {"supplier_id": product.supplier.supplier_id,"name": product.supplier.name,"contact_email": product.supplier.contact_email}
+        
         if isinstance(product, PhysicalProduct):
             item = {
                 "type": "physical",
