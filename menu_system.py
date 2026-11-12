@@ -109,8 +109,7 @@ def create_default_inventory():
 
 def save_inventory(inventory):
     data = []
-    supplier_data = {"supplier_id": product.supplier.supplier_id,"name": product.supplier.name,"contact_email": product.supplier.contact_email
-}
+    supplier_data = {"supplier_id": product.supplier.supplier_id,"name": product.supplier.name,"contact_email": product.supplier.contact_email}
     for product in inventory.get_products():
         if isinstance(product, PhysicalProduct):
             item = {
@@ -275,12 +274,17 @@ def search_product(inventory):
     else:
         print("Product Found")
         print("--------------------------------------------")
-        product.display_information()
-        print("Fulfilment:", product.get_fufillment_method())
-        if isinstance(product, CanBeShipped):
-            print(f"Shipping Cost: ${product.calculate_shipping_cost():.2f}")
+        show_product_details(product)
 
-        print("--------------------------------------------")
+def show_product_details(product: Product) -> None:
+
+    product.display_information()
+
+    print("Fulfilment:", product.get_fufillment_method())
+
+    print("Supplier:")
+    product.display_supplier_information()
+    print("--------------------------------")
 
 
 def main():
@@ -328,3 +332,20 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+supplier = Supplier(
+    "S001",
+    "Tech Supplies",
+    "tech@example.com"
+)
+
+physical = PhysicalProduct(
+    "P001", "Laptop", 1200, 15, 2.5, supplier
+)
+
+digital = DigitalProduct(
+    "D001", "Antivirus", 45, 25, 500, supplier
+)
+
+show_product_details(physical)
+show_product_details(digital)
