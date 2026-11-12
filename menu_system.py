@@ -5,6 +5,8 @@ from physical_product import PhysicalProduct
 from digital_product import DigitalProduct
 from can_be_shipped import CanBeShipped
 from inventory import Inventory
+from supplier import Supplier
+from order import Order
 
 FILE_NAME = "inventory.json" 
 
@@ -15,7 +17,8 @@ DEFAULT_INVENTORY = [
         "name": "Laptop",
         "price": 1200.00,
         "stock": 15,
-        "weight": 2.5
+        "weight": 2.5,
+        "supplier": {"supplier_id": "S001","name": "Tech Supplies","contact_email": "tech@example.com"}
     },
     {
         "type": "physical",
@@ -23,7 +26,8 @@ DEFAULT_INVENTORY = [
         "name": "Mouse",
         "price": 25.50,
         "stock": 40,
-        "weight": 0.2
+        "weight": 0.2,
+        "supplier": {"supplier_id": "S001","name": "Tech Supplies","contact_email": "tech@example.com"}
     },
     {
         "type": "digital",
@@ -31,9 +35,11 @@ DEFAULT_INVENTORY = [
         "name": "Antivirus Software",
         "price": 45.00,
         "stock": 25,
-        "download_size": 500
+        "download_size": 500,
+        "supplier": {"supplier_id": "S002","name": "Software Solutions","contact_email": "software@example.com"}
     }
 ]
+
 def create_product(item):
 
     product_type = item["type"].lower()
