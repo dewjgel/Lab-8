@@ -18,7 +18,7 @@ class Inventory:
 
     def remove_product(self, product_id: str) -> bool:
 
-        product = self.find_product(product_id)
+        product = self.search_product(product_id)
 
         if product is None:
             return False

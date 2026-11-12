@@ -3,3 +3,6 @@ __pycache__/digital_product.cpython-314.pyc
 __pycache__/inventory.cpython-314.pyc
 __pycache__/order_line.cpython-314.pyc
 __pycache__/order.cpython-314.pyc
+__pycache__/physical_product.cpython-314.pyc
+__pycache__/product.cpython-314.pyc
+__pycache__/supplier.cpython-314.pyc
