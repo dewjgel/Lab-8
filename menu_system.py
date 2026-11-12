@@ -335,20 +335,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-supplier = Supplier(
-    "S001",
-    "Tech Supplies",
-    "tech@example.com"
-)
-
-physical = PhysicalProduct(
-    "P001", "Laptop", 1200, 15, 2.5, supplier
-)
-
-digital = DigitalProduct(
-    "D001", "Antivirus", 45, 25, 500, supplier
-)
-
-show_product_details(physical)
-show_product_details(digital)
