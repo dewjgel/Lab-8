@@ -1,0 +1,101 @@
+commit 5c56098ab6d00b5debce6f49289cd99ace321ef7
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 12:44:33 2026 +0800
+
+    updated uml diagram
+
+commit bc4c8951fa1338f5af1be9aacdc73c039a1e9769
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 07:33:32 2026 +0800
+
+    temporary uml diagram
+
+commit 3788ea942bc693aae579e780d0c6bf044ac1e394
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 07:26:58 2026 +0800
+
+    adjust_inventory_system and testing out test script
+
+commit a8b1398a79b96a6e015317e10162f49c9ea026b8
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 07:18:09 2026 +0800
+
+    adjusted menu_system 2
+
+commit 1d18c6e432843ec6346b2980e8dfb3cf34d60b44
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 07:14:26 2026 +0800
+
+    adjusted menu_system
+
+commit 6377ec6f9e22404369a7d2dfed153dfd04fbcd91
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 07:05:01 2026 +0800
+
+    changed menu_system
+
+commit e170e9678385de40856a35ae541497c37eb05f4f
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:48:57 2026 +0800
+
+    updated create and save inventory in menu_system
+
+commit f58ee56922e0c11ee66377b042fdb043349cbef8
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:42:59 2026 +0800
+
+    updated default inventory in menu_system
+
+commit de5d971c73d7f94e969ae90bcc1150689281fc4b
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:38:22 2026 +0800
+
+    creating and completing order.py class
+
+commit be108f5b6c7705a612afa2843d752e7b46b50cf2
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:35:43 2026 +0800
+
+    created and completed order line class
+
+commit 542f459ff27fb676f638171c994595097becef0d
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:34:04 2026 +0800
+
+    updated inventory.py
+
+commit bed5769b27d38503019d61970799465df40d81b1
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:27:21 2026 +0800
+
+    updated digital product class to accomadate the supplier class
+
+commit ea297f1486524bfb0a977e7572af4fb98d798562
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:20:53 2026 +0800
+
+    updated physical product class with supplier and type hints
+
+commit 461d7284225e9c8119c17384715beeb670ffbd5b
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:17:13 2026 +0800
+
+    updated product.py to fit the supplier class addition
+
+commit 0e4514805374f417e8e29855ec9016ee9d425c66
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:12:42 2026 +0800
+
+    completed supplier class
+
+commit 621661a11d411b9bd72581045bca6880a1b77d72
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:09:51 2026 +0800
+
+    added supplier class
+
+commit 0cb4220ad833f91ac383ee1a54288122dc2121df
+Author: 2603195 <2603195@sit.singaporetech.edu.sg>
+Date:   Fri Nov 13 06:07:51 2026 +0800
+
+    shifted lab 7 files into lab 8
