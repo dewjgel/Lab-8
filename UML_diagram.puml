@@ -1,0 +1,81 @@
+@startuml UML_diagram
+
+class Supplier {
+    +str supplier_id
+    +str name
+    +str contact_email
+    +display_information() : None
+}
+
+abstract class Product {
+    +str product_id
+    +str name
+    +float price
+    +int stock
+    +Supplier supplier
+    +update_stock(quantity: int) : None
+    +display_information() : None
+    +display_supplier_information() : None
+    +get_fufillment_method() : str
+}
+
+class PhysicalProduct {
+    +float weight
+    +calculate_shipping_cost() : float
+    +get_fufillment_method() : str
+}
+
+class DigitalProduct {
+    +float download_size
+    +get_fufillment_method() : str
+}
+
+interface CanBeShipped {
+    +calculate_shipping_cost() : float
+}
+
+class Inventory {
+    +Product[] products
+    +add_product(product: Product) : bool
+    +remove_product(product_id: str) : bool
+    +find_product(product_id: str) : Product
+    +get_products() : list
+    +display_inventory() : None
+}
+
+class Order {
+    +str order_id
+    +OrderLine[] order_lines
+    +add_order_line(product: Product, quantity: int) : None
+    +remove_order_line(index: int) : bool
+    +calculate_total() : float
+    +display_order() : None
+}
+
+class OrderLine {
+    +Product product
+    +int quantity
+    +calculate_subtotal() : float
+    +display_information() : None
+}
+
+' Inheritance relationships
+Product <|-- PhysicalProduct
+Product <|-- DigitalProduct
+
+' Interface implementation
+CanBeShipped <|.. PhysicalProduct
+
+' Supplier relationship
+Supplier "1" -- "0..*" Product : supplies
+
+' Inventory aggregation
+Inventory "0..1" o-- "0..*" Product : contains
+
+' Order composition
+Order "1" *-- "0..*" OrderLine : owns
+
+' OrderLine association
+OrderLine "0..*" -- "1" Product : refers to
+
+@enduml
